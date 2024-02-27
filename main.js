@@ -20,10 +20,7 @@ async function main() {
       exit("The passed version range is not valid.");
     }
 
-    const version = await resolveVersion(range);
-    if (version === null) {
-      exit("Could not resolve a version for the given range.");
-    }
+    const version = range;
 
     core.info(
       `Going to install ${
