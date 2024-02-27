@@ -15,7 +15,7 @@ function exit(message) {
 
 async function main() {
   try {
-    const version = core.getInput("deno-version");
+    const version = {version: core.getInput("deno-version"), isCanary: false};
 
     core.info(
       `Going to install ${
