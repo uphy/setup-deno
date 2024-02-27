@@ -15,7 +15,7 @@ function exit(message) {
 
 async function main() {
   try {
-    const version = parseVersionRange(core.getInput("deno-version"));
+    const version = core.getInput("deno-version");
 
     core.info(
       `Going to install ${
