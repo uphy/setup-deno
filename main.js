@@ -15,12 +15,7 @@ function exit(message) {
 
 async function main() {
   try {
-    const range = parseVersionRange(core.getInput("deno-version"));
-    if (range === null) {
-      exit("The passed version range is not valid.");
-    }
-
-    const version = range;
+    const version = parseVersionRange(core.getInput("deno-version"));
 
     core.info(
       `Going to install ${
